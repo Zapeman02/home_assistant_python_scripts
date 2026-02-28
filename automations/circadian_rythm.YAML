@@ -1,0 +1,15 @@
+  alias: Circadian Rythm
+  description: Circadian Rythm brightness of lights
+  triggers:
+  - trigger: time_pattern
+    minutes: /1
+  conditions:
+  - condition: state
+    entity_id: input_boolean.circadian_rythm
+    state: 'on'
+  actions:
+  - action: python_script.circadian_rythm
+    metadata: {}
+    data: {}
+  mode: single
+
