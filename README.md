@@ -16,6 +16,7 @@ python_script:
 | Script | Description |
 |--------|-------------|
 | [Circadian Rhythm](docs/circadian_rythm.md) | Gradually adjusts light brightness and color temperature throughout the day |
+| [Color Wave](docs/color_wave.md) | Runs an animated color effect across a list of lights, with wave and sync modes, then restores original states |
 
 ## Installation
 
