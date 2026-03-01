@@ -1,0 +1,28 @@
+
+action: python_script.color_wave
+data:
+  lights:
+    - light.ceiling_lights_bedroom
+    - light.fonsterlampa
+    - light.fonsterlampa_2
+    - light.ceiling_lights_kitchen
+    - light.entrance_light
+  colors:
+    - - 255
+      - 0
+      - 0
+    - - 255
+      - 165
+      - 0
+    - - 0
+      - 255
+      - 0
+    - - 0
+      - 0
+      - 255
+    - - 148
+      - 0
+      - 211
+  mode: "{{ states('input_select.color_wave_mode') | default('wave') }}"
+  transition_speed: "{{ states('input_number.color_wave_speed') | float(0.1) }}"
+  repetitions: "{{ states('input_number.color_wave_repetitions') | int(1) }}"
